@@ -1,7 +1,11 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-color: white; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,50 +13,232 @@ body {
 }
 
 .border {
-    background-color: lilac;
+    background-color: transparent;
     padding: 0.5in;
     box-sizing: border-box;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
     height: 100%;
+    background-image: url('images/dark-purple-background-8vuu2ttp19yixcp9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
     background-color: white;
-    padding: 10px;
     box-sizing: border-box;
+    position: relative; 
 }
 
-.main-text {
-    width: 60%;
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.home {
+    background: url('images/dark-purple-background-8vuu2ttp19yixcp9.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.port {
+    background: url('images/realblue.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.port-container { /* Separate container for the new backgrounds (behind side boxes) */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/realblue.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
     background-color: white;
-    border: 2px solid lightgray;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.qual {
+    background: url('images/blue.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.qual-container { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/blue.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-color: white;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.service {
+    background: url('images/redpink.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.service-container { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/redpink.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-color: white;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+
+.craps {
+    background: url('images/felt.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.craps-container { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/felt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-color: white;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main-text {
+    width: 70%;
+    background-color: white;
+    border-left: 4px solid lightgray;
+    border-right: none;
     padding: 10px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1; 
+    margin: 0; 
     height: 100%;
 }
 
 .sidebars {
-    width: 35%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    z-index: 2; 
+    margin: 0;
+    position: relative;
 }
 
 .sidebar {
     background-color: white;
-    border: 2px solid lightgray;
+    border: 3px solid lightgray;
     padding: 10px;
     box-sizing: border-box;
     width: 100%;
-}
-
-.sidebar-links {
     margin-bottom: 10px;
 }
 
-.sidebar-images {
+
+.sidebar-links {
     margin-top: 10px;
+    margin-bottom: none;
+    height: auto;
+    position: relative;
+}
+
+.sidebar-images {
+    flex-grow: 1;
+    margin-top: 10px;
+    border-bottom: 25px;
+    position: relative;
+}
+
+.sidebar-links a {
+    font-size: 20px; 
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #000; 
+    text-decoration: none; 
+    display: block; 
+    padding: 8px 0; 
+}
+
+.sidebar-links a:hover {
+    color: #705e8a;
+    text-decoration: rgb(132, 59, 188) wavy underline;
+}
+
+/* Style for the "fold" effect on the side boxes ----------------------------------------------------------------------------------------------------------------------- */
+.sidebar-links::after {
+    content: "";
+    position: absolute;
+    bottom: -17px; 
+    left: -2px; 
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-top: 17px solid lightgray;
+    z-index: 1;
+}
+
+.sidebar-images::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: -2px; 
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-top: 17px solid lightgray; 
+    z-index: 1; 
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+h1, h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0 0 10px 0; 
+}
+
+p {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding-top: 10px; 
+}
+
+.main-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 20px;
+    height: 100%;
+    background-color: white;
+    z-index: -1; 
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
 }
